@@ -1,29 +1,29 @@
-LowZ
-A fast, fully client‑side image compressor & converter designed for modern workflows.
+## ⚡ LowZ
+Modern, client‑side image compression & conversion tool
 
-LowZ supports WebP, JPEG and PNG conversion, adjustable quality, drag‑and‑drop uploads, offline usage, and a polished glassmorphism UI optimized for RTL languages.
+WebP • JPEG • PNG • Quality Control • Drag & Drop • Offline • RTL‑Optimized
 
-Features
-100% client‑side (no server uploads)
+🚀 Features
+100% client‑side (privacy‑safe)
 Convert between WebP / JPEG / PNG
 Adjustable compression quality
 Drag & drop interface
-Clean glassmorphism UI + Dark Mode
-RTL + Vazirmatn font optimized
-Fully responsive
+Glassmorphism UI + Dark Mode
+RTL layout + Vazirmatn font
+Fully responsive design
 PWA‑ready architecture
-Technology
+🛠️ Technology Stack
 HTML5
 CSS3 (Glassmorphism + Dark Mode)
 Vanilla JavaScript
-Canvas API for on‑device processing
-How to Use
-Upload or drag‑and‑drop your image
-Choose output format
+Canvas API (on‑device image processing)
+📥 How to Use
+Upload or drag & drop your image
+Select output format
 Adjust compression quality
-Download the optimized image
-Why LowZ?
-LowZ is built for designers, photographers, and web developers who need a fast, privacy‑safe, offline image compressor — without relying on any server.
+Download the optimized result
+🎯 Why LowZ?
+A privacy‑first, designer‑friendly compressor built for modern workflows — no servers, no tracking, fully offline.
 
-License
+📄 License
 MIT License (see LICENSE file)
