@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کمپرسور پرو | Dark Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon">⚡</div>
+                <div>
+                    <h1>کمپرسور پرو</h1>
+                    <p>فشرده‌سازی امن در مرورگر شما</p>
+                </div>
+            </div>
+            <div class="badge">OFFLINE MODE</div>
+        </header>
+
+        <div class="main-layout">
+            
+            <!-- بخش آپلود و پیش‌نمایش (سمت چپ در دسکتاپ) -->
+            <main class="preview-section">
+                <div class="upload-area" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                    <div class="upload-content">
+                        <div class="icon-box">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        </div>
+                        <h3>تصویر را بکشید و رها کنید</h3>
+                        <p>پشتیبانی از JPG, PNG, WebP</p>
+                    </div>
+                    
+                    <!-- کانتینر پیش‌نمایش (مخفی در ابتدا) -->
+                    <div class="image-preview-container" id="previewContainer" style="display: none;">
+                        <img id="previewImg" src="" alt="Preview">
+                        <div class="loading-overlay" id="loader">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- سایدبار تنظیمات (سمت راست در دسکتاپ) -->
+            <aside class="controls-sidebar" id="controlsPanel">
+                
+                <div class="control-card">
+                    <label class="label-title">فرمت خروجی</label>
+                    <div class="format-grid">
+                        <button class="format-btn active" data-format="image/webp">WebP</button>
+                        <button class="format-btn" data-format="image/jpeg">JPEG</button>
+                        <button class="format-btn" data-format="image/png">PNG</button>
+                    </div>
+                </div>
+
+                <div class="control-card">
+                    <div class="flex-between">
+                        <label class="label-title">کیفیت فشرده‌سازی</label>
+                        <span class="quality-badge" id="qualityValue">80%</span>
+                    </div>
+                    <input type="range" id="qualityRange" min="1" max="100" value="80" class="custom-range">
+                    <div class="range-labels">
+                        <span>حداکثر فشرده‌سازی</span>
+                        <span>حداکثر کیفیت</span>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span>حجم اصلی</span>
+                        <strong id="originalSize">---</strong>
+                    </div>
+                    <div class="stat-separator"></div>
+                    <div class="stat-item">
+                        <span>حجم نهایی</span>
+                        <strong id="newSize" class="text-highlight">---</strong>
+                    </div>
+                    <div class="saving-badge" id="savings">0% کاهش</div>
+                </div>
+
+                <a id="downloadBtn" class="btn-primary disabled">
+                    <span>دانلود تصویر</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
